@@ -1,6 +1,6 @@
 /*
   Diseño bilingüe minimalista inspirado en la paleta de LinkedIn.
-  Mantiene las correcciones para navegadores móviles e Instagram.
+  Incluye correcciones para navegadores móviles e Instagram.
 */
 
 :root {
@@ -190,16 +190,16 @@ button.lang-button:focus-visible {
   max-width: 620px;
   margin: 16px 0 0;
   color: var(--text-primary);
-  font-size: clamp(1.02rem, 2.7vw, 1.2rem);
+  font-size: clamp(1rem, 2.7vw, 1.16rem);
   font-weight: 600;
   line-height: 1.48;
 }
 
 .bio {
   max-width: 620px;
-  margin: 11px 0 0;
+  margin: 10px 0 0;
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   line-height: 1.62;
 }
 
@@ -207,7 +207,7 @@ button.lang-button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
-  margin-top: 20px;
+  margin-top: 19px;
 }
 
 .topic-list span {
@@ -217,7 +217,7 @@ button.lang-button:focus-visible {
   border-radius: 999px;
   color: var(--accent);
   background: var(--accent-soft);
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   font-weight: 650;
   line-height: 1.25;
   overflow-wrap: anywhere;
@@ -225,13 +225,13 @@ button.lang-button:focus-visible {
 
 .link-section {
   min-width: 0;
-  margin-top: 34px;
+  margin-top: 33px;
 }
 
 .link-section h2 {
-  margin: 0 0 11px;
+  margin: 0 0 10px;
   color: var(--text-muted);
-  font-size: 0.74rem;
+  font-size: 0.73rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1.4;
@@ -242,7 +242,7 @@ button.lang-button:focus-visible {
 .link-grid {
   display: grid;
   min-width: 0;
-  gap: 9px;
+  gap: 8px;
 }
 
 .profile-link {
@@ -252,10 +252,10 @@ button.lang-button:focus-visible {
   gap: 13px;
   width: 100%;
   min-width: 0;
-  min-height: 70px;
-  padding: 13px 15px;
+  min-height: 64px;
+  padding: 11px 14px;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 11px;
   color: var(--text-primary);
   background: var(--card-bg);
   box-shadow: var(--link-shadow);
@@ -295,7 +295,7 @@ button.lang-button:focus-visible {
 
 .link-icon-text {
   color: var(--accent);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 750;
   letter-spacing: -0.01em;
 }
@@ -311,7 +311,7 @@ button.lang-button:focus-visible {
 
 .link-copy strong {
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   font-weight: 650;
   overflow-wrap: anywhere;
 }
@@ -320,7 +320,7 @@ button.lang-button:focus-visible {
   margin-top: 2px;
   overflow: hidden;
   color: var(--text-secondary);
-  font-size: 0.77rem;
+  font-size: 0.75rem;
   line-height: 1.35;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -333,11 +333,11 @@ button.lang-button:focus-visible {
 }
 
 footer {
-  margin-top: 34px;
-  padding-top: 18px;
+  margin-top: 32px;
+  padding-top: 17px;
   border-top: 1px solid var(--border);
   color: var(--text-muted);
-  font-size: 0.76rem;
+  font-size: 0.75rem;
   text-align: left;
 }
 
@@ -391,14 +391,14 @@ footer {
 
   .role {
     margin-top: 14px;
-    font-size: 0.98rem;
-    line-height: 1.45;
+    font-size: 0.96rem;
+    line-height: 1.44;
   }
 
   .bio {
-    margin-top: 10px;
-    font-size: 0.89rem;
-    line-height: 1.55;
+    margin-top: 9px;
+    font-size: 0.88rem;
+    line-height: 1.54;
   }
 
   .topic-list {
@@ -408,28 +408,28 @@ footer {
 
   .topic-list span {
     padding: 5px 8px;
-    font-size: 0.69rem;
+    font-size: 0.68rem;
   }
 
   .link-section {
-    margin-top: 29px;
+    margin-top: 28px;
   }
 
   .link-section h2 {
-    margin-bottom: 9px;
-    font-size: 0.68rem;
+    margin-bottom: 8px;
+    font-size: 0.67rem;
     letter-spacing: 0.09em;
   }
 
   .link-grid {
-    gap: 8px;
+    gap: 7px;
   }
 
   .profile-link {
     grid-template-columns: 37px minmax(0, 1fr) auto;
     gap: 10px;
-    min-height: 64px;
-    padding: 10px 12px;
+    min-height: 58px;
+    padding: 9px 12px;
     border-radius: 10px;
   }
 
@@ -445,27 +445,27 @@ footer {
   }
 
   .link-icon-text {
-    font-size: 0.66rem;
+    font-size: 0.64rem;
   }
 
   .link-copy strong {
-    font-size: 0.9rem;
+    font-size: 0.89rem;
   }
 
   .link-copy small {
     margin-top: 1px;
-    font-size: 0.71rem;
+    font-size: 0.7rem;
     white-space: normal;
   }
 
   .link-arrow {
-    font-size: 0.95rem;
+    font-size: 0.94rem;
   }
 
   footer {
-    margin-top: 28px;
-    padding-top: 16px;
-    font-size: 0.7rem;
+    margin-top: 27px;
+    padding-top: 15px;
+    font-size: 0.69rem;
   }
 }
 

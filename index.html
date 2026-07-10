@@ -8,7 +8,7 @@
   <meta
     id="meta-description"
     name="description"
-    content="Investigación sobre luz natural en arquitectura mediante simulación computacional, mediciones ópticas y análisis de confort, eficiencia y percepción espacial.">
+    content="Investigador del CONICET especializado en luz natural, simulación con Radiance, mediciones ópticas, confort y percepción espacial.">
   <meta name="keywords" content="luz natural, arquitectura, daylight, Radiance, simulación computacional, mediciones ópticas, confort visual, eficiencia, percepción espacial, factores humanos">
   <meta name="author" content="Juan Manuel Monteoliva">
   <meta name="robots" content="index, follow">
@@ -18,21 +18,19 @@
 
   <meta property="og:type" content="profile">
   <meta id="og-title" property="og:title" content="Juan Manuel Monteoliva | Investigación en luz natural">
-  <meta id="og-description" property="og:description" content="Luz natural, simulación computacional, mediciones ópticas y factores humanos en arquitectura.">
+  <meta id="og-description" property="og:description" content="Investigación en luz natural, simulación con Radiance, mediciones ópticas y factores humanos.">
   <meta property="og:url" content="https://jmmonteoliva.github.io/">
   <meta property="og:image" content="https://jmmonteoliva.github.io/images/avatar.png">
 
   <meta name="twitter:card" content="summary">
   <meta id="twitter-title" name="twitter:title" content="Juan Manuel Monteoliva | Investigación en luz natural">
-  <meta id="twitter-description" name="twitter:description" content="Luz natural, simulación computacional, mediciones ópticas y factores humanos en arquitectura.">
+  <meta id="twitter-description" name="twitter:description" content="Investigación en luz natural, simulación con Radiance, mediciones ópticas y factores humanos.">
   <meta name="twitter:image" content="https://jmmonteoliva.github.io/images/avatar.png">
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/brands.css">
-  <link rel="stylesheet" href="css/custom.css">
-
-  <script src="js/language.js" defer></script>
+  <link rel="stylesheet" href="css/custom.css?v=20260710-2">
 </head>
 
 <body>
@@ -40,9 +38,21 @@
     <main class="profile-card">
 
       <div class="topbar">
-        <div class="language-switcher" role="group" aria-label="Selector de idioma">
-          <button type="button" class="lang-button" data-lang="es" aria-pressed="true">ES</button>
-          <button type="button" class="lang-button" data-lang="en" aria-pressed="false">EN</button>
+        <div class="language-switcher" role="group" aria-label="Seleccionar idioma">
+          <button
+            type="button"
+            class="lang-button"
+            data-lang="es"
+            aria-label="Español"
+            aria-pressed="true"
+            onclick="setLanguage('es')">ES</button>
+          <button
+            type="button"
+            class="lang-button"
+            data-lang="en"
+            aria-label="English"
+            aria-pressed="false"
+            onclick="setLanguage('en')">EN</button>
         </div>
       </div>
 
@@ -52,29 +62,35 @@
           src="images/avatar.png"
           alt="Retrato de Juan Manuel Monteoliva">
 
-        <p class="eyebrow" data-i18n="eyebrow">INVESTIGACIÓN EN LUZ NATURAL · ARQUITECTURA</p>
+        <p class="eyebrow" data-i18n="eyebrow">
+          LUZ NATURAL · SIMULACIÓN · FACTORES HUMANOS
+        </p>
 
         <h1>Juan Manuel Monteoliva</h1>
 
         <p class="role" data-i18n="role">
-          Investigación en luz natural, desempeño ambiental y percepción espacial
+          Investigador adjunto del CONICET · Profesor en FAD-UNCUYO
         </p>
 
         <p class="bio" data-i18n="bio">
-          Simulación computacional con Radiance, mediciones ópticas y desarrollo
-          de métricas para evaluar confort, eficiencia y experiencia espacial.
+          Investigo la luz natural en arquitectura mediante simulación con Radiance
+          y mediciones ópticas. Desarrollo métricas y herramientas para evaluar
+          confort, eficiencia y percepción espacial, integrando ciencia, diseño
+          y factores humanos.
         </p>
 
         <div class="topic-list" aria-label="Áreas de trabajo">
-          <span>Daylight</span>
+          <span data-i18n="topicDaylight">Luz natural</span>
           <span>Radiance</span>
           <span data-i18n="topicMeasurements">Mediciones ópticas</span>
-          <span data-i18n="topicHumanFactors">Factores humanos</span>
+          <span data-i18n="topicPerception">Percepción espacial</span>
         </div>
       </header>
 
       <section class="link-section" aria-labelledby="professional-title">
-        <h2 id="professional-title" data-i18n="professionalTitle">Red profesional y desarrollo</h2>
+        <h2 id="professional-title" data-i18n="professionalTitle">
+          Red profesional y desarrollo
+        </h2>
 
         <div class="link-grid">
           <a
@@ -85,19 +101,6 @@
             <span class="link-icon link-icon-text" aria-hidden="true">INAHE</span>
             <span class="link-copy">
               <strong>INAHE · CONICET</strong>
-              <small data-i18n="inaheSubtitle">Perfil institucional y actividad científica</small>
-            </span>
-            <span class="link-arrow" aria-hidden="true">↗</span>
-          </a>
-
-
-          <a
-            class="profile-link"
-            href="mailto:jmonteoliva@mendoza-conicet.gob.ar">
-            <span class="link-icon link-icon-text" aria-hidden="true">@</span>
-            <span class="link-copy">
-              <strong data-i18n="emailTitle">Correo profesional</strong>
-              <small>jmonteoliva@mendoza-conicet.gob.ar</small>
             </span>
             <span class="link-arrow" aria-hidden="true">↗</span>
           </a>
@@ -112,7 +115,6 @@
             </span>
             <span class="link-copy">
               <strong>LinkedIn</strong>
-              <small data-i18n="linkedinSubtitle">Experiencia y colaboraciones</small>
             </span>
             <span class="link-arrow" aria-hidden="true">↗</span>
           </a>
@@ -127,7 +129,17 @@
             </span>
             <span class="link-copy">
               <strong>GitHub</strong>
-              <small data-i18n="githubSubtitle">Código, herramientas y proyectos</small>
+            </span>
+            <span class="link-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="profile-link"
+            href="mailto:jmonteoliva@mendoza-conicet.gob.ar">
+            <span class="link-icon link-icon-text" aria-hidden="true">@</span>
+            <span class="link-copy">
+              <strong data-i18n="emailTitle">Correo profesional</strong>
+              <small>jmonteoliva@mendoza-conicet.gob.ar</small>
             </span>
             <span class="link-arrow" aria-hidden="true">↗</span>
           </a>
@@ -146,7 +158,6 @@
             <span class="link-icon link-icon-text" aria-hidden="true">RG</span>
             <span class="link-copy">
               <strong>ResearchGate</strong>
-              <small data-i18n="researchgateSubtitle">Publicaciones y actividad científica</small>
             </span>
             <span class="link-arrow" aria-hidden="true">↗</span>
           </a>
@@ -167,7 +178,9 @@
       </section>
 
       <section class="link-section" aria-labelledby="communication-title">
-        <h2 id="communication-title" data-i18n="communicationTitle">Comunicación y contenido</h2>
+        <h2 id="communication-title" data-i18n="communicationTitle">
+          Comunicación y contenido
+        </h2>
 
         <div class="link-grid">
           <a
@@ -180,7 +193,7 @@
             </span>
             <span class="link-copy">
               <strong>Instagram</strong>
-              <small data-i18n="instagramSubtitle">Fotografía, congresos y actividad profesional</small>
+              <small>@jm.monteoliva</small>
             </span>
             <span class="link-arrow" aria-hidden="true">↗</span>
           </a>
@@ -195,7 +208,7 @@
             </span>
             <span class="link-copy">
               <strong>Retratos de Ciencia</strong>
-              <small data-i18n="retratosSubtitle">Proyecto de comunicación visual de la ciencia</small>
+              <small>@retratosdeciencia</small>
             </span>
             <span class="link-arrow" aria-hidden="true">↗</span>
           </a>
@@ -208,5 +221,110 @@
 
     </main>
   </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var translations = {
+        es: {
+          documentTitle: "Juan Manuel Monteoliva | Investigación en luz natural",
+          metaDescription: "Investigador del CONICET especializado en luz natural, simulación con Radiance, mediciones ópticas, confort y percepción espacial.",
+          socialDescription: "Investigación en luz natural, simulación con Radiance, mediciones ópticas y factores humanos.",
+          eyebrow: "LUZ NATURAL · SIMULACIÓN · FACTORES HUMANOS",
+          role: "Investigador adjunto del CONICET · Profesor en FAD-UNCUYO",
+          bio: "Investigo la luz natural en arquitectura mediante simulación con Radiance y mediciones ópticas. Desarrollo métricas y herramientas para evaluar confort, eficiencia y percepción espacial, integrando ciencia, diseño y factores humanos.",
+          topicDaylight: "Luz natural",
+          topicMeasurements: "Mediciones ópticas",
+          topicPerception: "Percepción espacial",
+          professionalTitle: "Red profesional y desarrollo",
+          academicTitle: "Perfiles académicos",
+          communicationTitle: "Comunicación y contenido",
+          emailTitle: "Correo profesional"
+        },
+        en: {
+          documentTitle: "Juan Manuel Monteoliva | Daylight Research",
+          metaDescription: "CONICET researcher specializing in daylight, Radiance simulation, optical measurements, comfort, and spatial perception.",
+          socialDescription: "Daylight research, Radiance simulation, optical measurements, and human factors.",
+          eyebrow: "DAYLIGHT · SIMULATION · HUMAN FACTORS",
+          role: "CONICET Associate Researcher · Professor at FAD-UNCUYO",
+          bio: "I study daylight in architecture through Radiance simulation and optical measurements. I develop metrics and tools to assess comfort, efficiency, and spatial perception, integrating science, design, and human factors.",
+          topicDaylight: "Daylight",
+          topicMeasurements: "Optical measurements",
+          topicPerception: "Spatial perception",
+          professionalTitle: "Professional network and development",
+          academicTitle: "Academic profiles",
+          communicationTitle: "Communication and content",
+          emailTitle: "Professional email"
+        }
+      };
+
+      function setMetaContent(selector, content) {
+        var element = document.querySelector(selector);
+        if (element) {
+          element.setAttribute("content", content);
+        }
+      }
+
+      window.setLanguage = function (language) {
+        var selectedLanguage = translations[language] ? language : "es";
+        var strings = translations[selectedLanguage];
+        var elements = document.querySelectorAll("[data-i18n]");
+        var buttons = document.querySelectorAll(".lang-button");
+
+        document.documentElement.lang = selectedLanguage;
+        document.title = strings.documentTitle;
+
+        setMetaContent("#meta-description", strings.metaDescription);
+        setMetaContent("#og-title", strings.documentTitle);
+        setMetaContent("#og-description", strings.socialDescription);
+        setMetaContent("#twitter-title", strings.documentTitle);
+        setMetaContent("#twitter-description", strings.socialDescription);
+
+        Array.prototype.forEach.call(elements, function (element) {
+          var key = element.getAttribute("data-i18n");
+          if (strings[key]) {
+            element.textContent = strings[key];
+          }
+        });
+
+        Array.prototype.forEach.call(buttons, function (button) {
+          button.setAttribute(
+            "aria-pressed",
+            button.getAttribute("data-lang") === selectedLanguage ? "true" : "false"
+          );
+        });
+
+        try {
+          window.localStorage.setItem("preferredLanguage", selectedLanguage);
+        } catch (error) {
+          /* Some embedded browsers restrict localStorage. Language switching still works. */
+        }
+      };
+
+      var initialLanguage = "es";
+
+      try {
+        var savedLanguage = window.localStorage.getItem("preferredLanguage");
+        if (translations[savedLanguage]) {
+          initialLanguage = savedLanguage;
+        } else if (
+          window.navigator.language &&
+          window.navigator.language.toLowerCase().indexOf("es") !== 0
+        ) {
+          initialLanguage = "en";
+        }
+      } catch (error) {
+        if (
+          window.navigator.language &&
+          window.navigator.language.toLowerCase().indexOf("es") !== 0
+        ) {
+          initialLanguage = "en";
+        }
+      }
+
+      window.setLanguage(initialLanguage);
+    }());
+  </script>
 </body>
 </html>

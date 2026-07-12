@@ -76,50 +76,43 @@ svg {
   box-shadow: var(--shadow);
 }
 
-.profile-card::before {
-  position: absolute;
-  top: -190px;
-  left: 50%;
-  width: 520px;
-  height: 320px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(104, 180, 255, 0.12), transparent 68%);
-  content: "";
-  pointer-events: none;
-  transform: translateX(-50%);
-}
-
 .topbar {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 8px;
+  position: absolute;
+  z-index: 5;
+  top: clamp(28px, 5vw, 48px);
+  right: clamp(28px, 5vw, 48px);
+  width: auto;
+  margin: 0;
 }
 
 .language-switcher {
   display: inline-flex;
   align-items: center;
+  width: max-content;
+  max-width: none;
   gap: 2px;
   padding: 3px;
+  overflow: visible;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: rgba(22, 34, 49, 0.86);
+  background: rgba(22, 34, 49, 0.92);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
   backdrop-filter: blur(8px);
 }
 
-button.lang-button {
+.language-switcher > button.lang-button {
   -webkit-appearance: none;
   appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 42px !important;
   min-width: 42px;
+  max-width: 42px;
+  min-height: 0;
   height: 31px;
   margin: 0;
-  padding: 0 10px;
+  padding: 0;
   border: 0;
   border-radius: 999px;
   color: var(--text-muted);
@@ -129,16 +122,25 @@ button.lang-button {
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.04em;
+  text-align: center;
+  white-space: nowrap;
   cursor: pointer;
-  transition: color 150ms ease, background-color 150ms ease;
+  transition: color 150ms ease, background-color 150ms ease, transform 150ms ease;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
 
-button.lang-button[aria-pressed="true"] {
+.language-switcher > button.lang-button[aria-pressed="true"] {
   color: #ffffff;
   background: var(--accent-strong);
 }
+
+.language-switcher > button.lang-button:hover {
+  color: #ffffff;
+  filter: none;
+  transform: none;
+}
+
 
 button.lang-button:focus-visible,
 a:focus-visible {
@@ -169,41 +171,6 @@ a:focus-visible {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 0 6px rgba(104, 180, 255, 0.045);
-}
-
-.daylight-arc {
-  position: absolute;
-  z-index: 1;
-  top: 42px;
-  left: 64px;
-  width: 156px;
-  height: 68px;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.daylight-arc::before {
-  position: absolute;
-  top: 19px;
-  left: -18px;
-  width: 170px;
-  height: 86px;
-  border-top: 1px solid rgba(239, 184, 86, 0.75);
-  border-radius: 50%;
-  content: "";
-  transform: rotate(8deg);
-}
-
-.daylight-arc::after {
-  position: absolute;
-  top: 26px;
-  right: 8px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--daylight);
-  box-shadow: 0 0 10px rgba(239, 184, 86, 0.88);
-  content: "";
 }
 
 .eyebrow {
@@ -305,29 +272,41 @@ a:focus-visible {
 }
 
 .action-copy {
+  display: flex;
   min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+  text-align: left;
 }
 
 .action-copy strong,
 .action-copy small {
   display: block;
+  width: 100%;
 }
 
 .action-copy strong {
   color: inherit;
-  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 750;
+  line-height: 1.22;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
 }
 
 .action-copy small {
-  margin-top: 3px;
+  margin: 0;
   overflow-wrap: anywhere;
   color: var(--text-secondary);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0;
   text-transform: none;
 }
+
 
 .action-button-primary {
   color: #ffffff;
@@ -336,9 +315,11 @@ a:focus-visible {
 }
 
 .action-button-secondary {
+  min-height: 68px;
   color: var(--text-primary);
   border-color: var(--border-strong);
   background: rgba(22, 34, 49, 0.62);
+  text-transform: none;
 }
 
 .action-button:hover {
@@ -364,7 +345,7 @@ a:focus-visible {
   position: relative;
   z-index: 1;
   min-width: 0;
-  margin-top: 34px;
+  margin-top: 31px;
 }
 
 .link-section h2 {
@@ -527,13 +508,15 @@ footer {
   }
 
   .topbar {
-    margin-bottom: 6px;
+    top: 18px;
+    right: max(18px, env(safe-area-inset-right));
   }
 
-  button.lang-button {
+  .language-switcher > button.lang-button {
+    width: 39px !important;
     min-width: 39px;
+    max-width: 39px;
     height: 29px;
-    padding: 0 9px;
     font-size: 0.68rem;
   }
 
@@ -544,19 +527,7 @@ footer {
   }
 
   .avatar-wrap {
-    margin-bottom: 20px;
-  }
-
-  .daylight-arc {
-    top: 31px;
-    left: 48px;
-    width: 128px;
-    height: 57px;
-  }
-
-  .daylight-arc::before {
-    width: 140px;
-    height: 70px;
+    margin-bottom: 18px;
   }
 
   .eyebrow {
@@ -590,7 +561,7 @@ footer {
 
   .primary-actions {
     gap: 9px;
-    margin-top: 21px;
+    margin-top: 20px;
   }
 
   .action-button {
@@ -607,13 +578,16 @@ footer {
     height: 20px;
   }
 
+  .action-copy strong {
+    font-size: 0.75rem;
+  }
+
   .action-copy small {
-    margin-top: 2px;
-    font-size: 0.66rem;
+    font-size: 0.64rem;
   }
 
   .link-section {
-    margin-top: 29px;
+    margin-top: 27px;
   }
 
   .link-section h2 {
@@ -697,7 +671,7 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .action-button,
   .profile-link,
-  button.lang-button {
+  .language-switcher > button.lang-button {
     transition: none;
   }
 }
